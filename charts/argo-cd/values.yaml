@@ -200,7 +200,15 @@ dex:
 
   ## Environment variables to pass to the Dex server
   ##
-  env: []
+  # env: []
+  env:
+  - name: http_proxy
+    value: http://10.164.66.241:3128
+  - name: https_proxy
+    value: http://10.164.66.241:3128
+  - name: no_proxy
+    value: argocd-repo-server,argocd-application-controller,argocd-metrics,argocd-server,argocd-server-metrics,argocd-redis,argocd-dex-server,10.0.0.0/8,localhost,127.0.0.1,localaddress,.dev.tap,10.201.186.0/24,10.101.211.0/24,.svc,.svc.cluster,.svc.cluster.local,10.233.0.0/18,10.233.64.0/18
+
 
   ## Annotations to be added to the Dex server pods
   ##
@@ -359,7 +367,14 @@ server:
 
   ## Environment variables to pass to argocd-server
   ##
-  env: []
+  # env: []
+  env:
+  - name: http_proxy
+    value: http://10.164.66.241:3128
+  - name: https_proxy
+    value: http://10.164.66.241:3128
+  - name: no_proxy
+    value: argocd-repo-server,argocd-application-controller,argocd-metrics,argocd-server,argocd-server-metrics,argocd-redis,argocd-dex-server,10.0.0.0/8,localhost,127.0.0.1,localaddress,.dev.tap,10.201.186.0/24,10.101.211.0/24,.svc,.svc.cluster,.svc.cluster.local,10.233.0.0/18,10.233.64.0/18
 
   ## Argo server log format: text|json
   logFormat: text
@@ -709,7 +724,15 @@ repoServer:
 
   ## Environment variables to pass to argocd-repo-server
   ##
-  env: []
+  # env: []
+  env:
+  - name: http_proxy
+    value: http://10.164.66.241:3128
+  - name: https_proxy
+    value: http://10.164.66.241:3128
+  - name: no_proxy
+    value: argocd-repo-server,argocd-application-controller,argocd-metrics,argocd-server,argocd-server-metrics,argocd-redis,argocd-dex-server,10.0.0.0/8,localhost,127.0.0.1,localaddress,.dev.tap,10.201.186.0/24,10.101.211.0/24,.svc,.svc.cluster,.svc.cluster.local,10.233.0.0/18,10.233.64.0/18
+
 
   ## Argo repoServer log format: text|json
   logFormat: text

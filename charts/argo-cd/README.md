@@ -332,3 +332,10 @@ through `xxx.extraArgs`
 | redis-ha.image.tag | Redis tag | `"5.0.8-alpine"` |
 
 [gRPC-ingress]: https://argoproj.github.io/argo-cd/operator-manual/ingress/
+
+```bash
+kubectl create ns argocd-helm-safe
+helm install [NAME] [CHART] [flags]
+helm install argo . --values values.yaml -n argocd-helm
+
+```
